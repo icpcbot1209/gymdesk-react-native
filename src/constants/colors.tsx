@@ -1,0 +1,1 @@
+export const customGray = '#9DABB4';
