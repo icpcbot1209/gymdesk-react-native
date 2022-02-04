@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useTheme, Button, Card, Title, RadioButton, TextInput } from 'react-native-paper';
-import { Image, ScrollView, StyleSheet, View } from 'react-native';
+import { Image, ScrollView, StyleSheet, View, Text } from 'react-native';
 import { customGray } from '../constants/colors';
 
 import { useNavigation } from '@react-navigation/core';
@@ -29,7 +29,7 @@ export const LogInPage = () => {
   }, [])
 
   return (
-    'Welcome'
+    <Text>'Welcome'</Text>
     // <ScrollView>
     //   <View style={styles.container}>
     //     <Card style={styles.card}>
