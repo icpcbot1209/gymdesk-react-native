@@ -1,14 +1,35 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTheme, Button, Card, Title, RadioButton, TextInput } from 'react-native-paper';
 import { Image, ScrollView, StyleSheet, View } from 'react-native';
 import { customGray } from '../constants/colors';
 
+import { useNavigation } from '@react-navigation/core';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { RootStackParamList } from '../routing/RootStackParams'; 
+
+import { handleAuthorize } from '../Service/OAuth';
+import React from 'react';
+
+type loginScreenProp = StackNavigationProp<RootStackParamList,'Login'>;
+
 export const LogInPage = () => {
+  const navigation = useNavigation<loginScreenProp>();
+
   const { colors } = useTheme();
   const [value, setValue] = useState<string>('');
   const [text, setText] = useState<string>('');
 
+  function onPressHandler() {
+    // endpoitAndRediect();
+    handleAuthorize();
+  }
+
+  useEffect(()=>{
+    // handleAuthorize();
+  }, [])
+
   return (
+    // 'Welcome'
     <ScrollView>
       <View style={styles.container}>
         <Card style={styles.card}>
@@ -28,8 +49,8 @@ export const LogInPage = () => {
 
             <TextInput
               label="Email Address"
-              value={text}
-              onChangeText={(text) => setText(text)}
+              // value={text}
+              onChangeText={(UserEmail) => setText(UserEmail)}
               autoComplete={false}
               mode="outlined"
               textContentType="emailAddress"
@@ -41,8 +62,8 @@ export const LogInPage = () => {
 
             <TextInput
               label="Password"
-              value={text}
-              onChangeText={(text) => setText(text)}
+              // value={text}
+              onChangeText={(UserPassword) => setText(UserPassword)}
               autoComplete={false}
               mode="outlined"
               textContentType="password"
@@ -53,7 +74,7 @@ export const LogInPage = () => {
 
             <View style={styles.divider}></View>
 
-            <Button mode="contained" onPress={() => {}} color={colors.error} contentStyle={styles.button}>
+            <Button mode="contained" onPress={() => onPressHandler()} color={colors.error} contentStyle={styles.button}>
               SIGN-IN
             </Button>
 
@@ -122,3 +143,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
   },
 });
+function identityserver(identityserver: any) {
+  throw new Error('Function not implemented.');
+}
+

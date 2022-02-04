@@ -1,5 +1,6 @@
 import { StyleSheet, View, Text, Touchable } from 'react-native';
-import { useState } from 'react';
+import  { useState } from 'react';
+import * as React from 'react';
 import { Avatar, List, Title, Chip, Button, IconButton } from 'react-native-paper';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

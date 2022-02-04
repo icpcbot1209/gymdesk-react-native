@@ -8,10 +8,11 @@ module.exports = function(api) {
         {
           alias: {
             assets: './assets',
-            src: './src'
-          }
-        }
-      ]
-    ]
+            src: './src',
+          },
+        },
+      ],
+      ['module:react-native-dotenv']
+    ],
   };
 };
