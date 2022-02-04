@@ -19,74 +19,74 @@ export const LogInPage = () => {
   const [value, setValue] = useState<string>('');
   const [text, setText] = useState<string>('');
 
-  function onPressHandler() {
-    // endpoitAndRediect();
-    handleAuthorize();
-  }
+  // function onPressHandler() {
+  //   // endpoitAndRediect();
+  //   handleAuthorize();
+  // }
 
   useEffect(()=>{
-    // handleAuthorize();
+    handleAuthorize();
   }, [])
 
   return (
-    // 'Welcome'
-    <ScrollView>
-      <View style={styles.container}>
-        <Card style={styles.card}>
-          <Card.Content>
-            <Image source={require('assets/img/circles.png')} style={styles.logo}></Image>
+    'Welcome'
+    // <ScrollView>
+    //   <View style={styles.container}>
+    //     <Card style={styles.card}>
+    //       <Card.Content>
+    //         <Image source={require('assets/img/circles.png')} style={styles.logo}></Image>
 
-            <View style={styles.divider}></View>
-            <Title style={styles.title}>Welcome back!</Title>
-            <View style={styles.divider}></View>
-            <RadioButton.Group value={value} onValueChange={(value: string) => setValue(value)}>
-              <View style={styles.radioGroup}>
-                <RadioButton.Item value="first" label="MEMBER" labelStyle={styles.radioLabel} position="leading" />
-                <RadioButton.Item value="second" label="MANAGER" labelStyle={styles.radioLabel} position="leading" />
-              </View>
-            </RadioButton.Group>
-            <View style={styles.divider}></View>
+    //         <View style={styles.divider}></View>
+    //         <Title style={styles.title}>Welcome back!</Title>
+    //         <View style={styles.divider}></View>
+    //         <RadioButton.Group value={value} onValueChange={(value: string) => setValue(value)}>
+    //           <View style={styles.radioGroup}>
+    //             <RadioButton.Item value="first" label="MEMBER" labelStyle={styles.radioLabel} position="leading" />
+    //             <RadioButton.Item value="second" label="MANAGER" labelStyle={styles.radioLabel} position="leading" />
+    //           </View>
+    //         </RadioButton.Group>
+    //         <View style={styles.divider}></View>
 
-            <TextInput
-              label="Email Address"
-              // value={text}
-              onChangeText={(UserEmail) => setText(UserEmail)}
-              autoComplete={false}
-              mode="outlined"
-              textContentType="emailAddress"
-              outlineColor={customGray}
-              activeOutlineColor={customGray}
-              style={styles.input}
-            />
-            <View style={styles.divider}></View>
+    //         <TextInput
+    //           label="Email Address"
+    //           // value={text}
+    //           onChangeText={(UserEmail) => setText(UserEmail)}
+    //           autoComplete={false}
+    //           mode="outlined"
+    //           textContentType="emailAddress"
+    //           outlineColor={customGray}
+    //           activeOutlineColor={customGray}
+    //           style={styles.input}
+    //         />
+    //         <View style={styles.divider}></View>
 
-            <TextInput
-              label="Password"
-              // value={text}
-              onChangeText={(UserPassword) => setText(UserPassword)}
-              autoComplete={false}
-              mode="outlined"
-              textContentType="password"
-              outlineColor={customGray}
-              activeOutlineColor={customGray}
-              style={styles.input}
-            />
+    //         <TextInput
+    //           label="Password"
+    //           // value={text}
+    //           onChangeText={(UserPassword) => setText(UserPassword)}
+    //           autoComplete={false}
+    //           mode="outlined"
+    //           textContentType="password"
+    //           outlineColor={customGray}
+    //           activeOutlineColor={customGray}
+    //           style={styles.input}
+    //         />
 
-            <View style={styles.divider}></View>
+    //         <View style={styles.divider}></View>
 
-            <Button mode="contained" onPress={() => onPressHandler()} color={colors.error} contentStyle={styles.button}>
-              SIGN-IN
-            </Button>
+    //         <Button mode="contained" onPress={() => onPressHandler()} color={colors.error} contentStyle={styles.button}>
+    //           SIGN-IN
+    //         </Button>
 
-            <View style={styles.divider}></View>
+    //         <View style={styles.divider}></View>
 
-            <Button mode="text" onPress={() => {}} color={customGray}>
-              Forgot Password
-            </Button>
-          </Card.Content>
-        </Card>
-      </View>
-    </ScrollView>
+    //         <Button mode="text" onPress={() => {}} color={customGray}>
+    //           Forgot Password
+    //         </Button>
+    //       </Card.Content>
+    //     </Card>
+    //   </View>
+    // </ScrollView>
   );
 };
 
