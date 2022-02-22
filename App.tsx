@@ -1,10 +1,6 @@
-import { StatusBar } from 'expo-status-bar';
 import * as React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { Provider as PaperProvider, DefaultTheme, Switch } from 'react-native-paper';
+import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 import { MainNavigation } from './src/routing/MainNavigation';
-
-
 
 const theme = {
   ...DefaultTheme,
@@ -14,9 +10,9 @@ const theme = {
   },
 };
 
-export default function App() {
+export default function App() {   
   return (
-    <PaperProvider>
+    <PaperProvider>      
       <MainNavigation />
     </PaperProvider>
   );
